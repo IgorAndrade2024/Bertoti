@@ -12,4 +12,16 @@ Programming Over Time We propose that “software engineering” encompasses not
 
 COMENTÁRIO:
 
-Na área temos mais preocupação com a vida do que programamos.
+A área de programação foca mais em criar cógos que solucionem o problema da forma mais fácil, ja na engenharia o foco vai alem do próprio código.
+
+EXEMPLOS DE TRADEOFFS:
+  - Na linguagem "c" abrimos mão de facilidade na hora de programar para ter mais velocidade de processamento.
+  - Na linguagem "python" abrimos mão de velocidade de processamento para ter mais facilidade na hora de programar.
+  - Dedicar tempo a hobbies e atividades de lazer pode significar menos tempo para estudar e se preparar para um novo cargo. 
+
+COMENTÁRIO DO SLIDE 57:
+
+Em vez de apresentar partes do produto é melhor apresentar uma ideia geral e ir melhorando com o tempo.
+
+CÓDIGO JAVA:
+
