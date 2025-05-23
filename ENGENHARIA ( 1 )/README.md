@@ -24,4 +24,99 @@ COMENTÁRIO DO SLIDE 57:
 Em vez de apresentar partes do produto é melhor apresentar uma ideia geral e ir melhorando com o tempo.
 
 CÓDIGO JAVA:
+  - CLASSE ALUNO:
 
+package attbertoti;
+
+public class Aluno {
+    private String nome;
+    private String classe;
+    private String nota;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+
+    public Aluno(String nome, String classe, String nota) {
+        this.nome = nome;
+        this.classe = classe;
+        this.nota = nota;
+    }    
+}
+
+  - CLASSE CLASSE:
+
+package attbertoti;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Classe {
+    private List<Aluno> Turma = new LinkedList<Aluno>();
+    
+    public void addAluno(Aluno aluno) {
+        Turma.add(aluno);
+    }
+    
+    public Aluno buscarClasse(String classe) {
+        for(Aluno aluno:Turma) {
+            if(aluno.getClasse().equals(classe)) {
+                return aluno;
+            }
+        }
+        return null;
+    }
+    
+    public List<Aluno> buscarNota(String nota) {
+        List<Aluno> encontrados = new LinkedList<Aluno>();
+        for(Aluno aluno:Turma) {
+            if(aluno.getNota().equals(nota)) {
+                encontrados.add(aluno);
+            }
+        }
+        return null;
+    }
+    
+    public List<Aluno> getTurma() {
+        return Turma;
+    }
+}
+
+  -CLASSE TESTE:
+
+package attbertoti;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        
+        Classe classe = new Classe();
+        classe.addAluno(new Aluno("Igor", "1A", "A"));
+        classe.addAluno(new Aluno("Toneli", "2B", "A+"));
+        classe.addAluno(new Aluno("Gabriel", "1A", "C-"));
+        classe.addAluno(new Aluno("João", "2B", "B+"));
+        classe.addAluno(new Aluno("Guilherme", "1A", "A"));
+        
+        Aluno aluno = classe.buscarClasse("1A");   
+    }    
+}
