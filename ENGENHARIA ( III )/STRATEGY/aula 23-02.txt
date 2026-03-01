@@ -1,0 +1,12 @@
+O anti padrão do strategy é a herança.
+
+super cliente(nome,identificador,saldo //)
+
+cliente comum (//)
+empresa (//empresta)
+aposentado (//empresta)
+estudannte (//)
+
+Duplicação de código ( no método, se fosse alterar a taxa de juros teria que fazer varias vezes )
+
+O padrão seria o polimorfismo
