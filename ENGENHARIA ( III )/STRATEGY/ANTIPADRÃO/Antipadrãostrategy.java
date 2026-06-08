@@ -8,7 +8,8 @@ public class Cliente {
         this.identificador = identificador;
         this.saldo = saldo;
     }
-    public void emprestimo(double valor) {
+    public double emprestimo(double valor) {
+        return valor;
     }
 }
 
@@ -17,7 +18,7 @@ public class ClienteComum extends Cliente {
         super(nome, identificador, saldo);
     }
     @Override
-    public void emprestimo(double valor) {
+    public double emprestimo(double valor) {
         return valor * 1.10;
     }
 }
@@ -26,8 +27,8 @@ public class Empresa extends Cliente {
     public Empresa(String nome, String identificador, double saldo) {
         super(nome, identificador, saldo);
     }
-    @override
-    public void emprestimo(double valor) {
+    @Override
+    public double emprestimo(double valor) {
         return valor * 1.08;
     }
 }
@@ -37,7 +38,7 @@ public class Aposentado extends Cliente {
         super(nome, identificador, saldo);
     }
     @Override
-    public void emprestimo(double valor) {
+    public double emprestimo(double valor) {
         return valor * 1.05;
     }
 }
@@ -47,7 +48,7 @@ public class Estudante extends Cliente {
         super(nome, identificador, saldo);
     }
     @Override
-    public void emprestimo(double valor) {
+    public double emprestimo(double valor) {
         return valor * 1.05;
     }
 }
